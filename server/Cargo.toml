@@ -1,0 +1,36 @@
+[package]
+name = "nerdtree-backend-server"
+version = "0.1.0"
+edition = "2018"
+authors = ["The NerdTree Root Node Developers"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+lto = true
+incremental = true
+opt-level = 3
+
+[dependencies]
+actix-web = "4.2.1"
+derive_more = "0.99.0"
+serde = { version = "1", features = ["derive"] }
+dotenv = "0.15.0"
+actix-web-validator = "5.0.1"
+validator = { version = "0.16.0", features = ["derive"] }
+diesel = { version = "2.0.0", features = ["postgres", "chrono", "r2d2", "uuid"] }
+r2d2 = "0.8.9"
+actix-ratelimit = "0.3.1"
+rust-argon2 = "1.0.0"
+rand = "0.8.4"
+uuid = { version = ">=0.7.0, <2.0.0", features = ["serde", "v1", "v4"]}
+jsonwebtoken = "8.1.1"
+chrono = { version = "0.4", features = ["serde"] }
+lettre = "0.10.0-rc.3"
+futures-util = "0.3"
+image = "0.24.4"
+actix-multipart = "0.4.0"
+actix-files = "0.6.2"
+awmpde = "0.7.1"
+env_logger = "0.9.0"
+actix-cors = "0.6.3"
